@@ -17,8 +17,8 @@ public class level3_6 {
 			int num = Integer.parseInt(input);
 			
 			if(num>0 && num<=100) {
-				for(int i=num; num>0; num--) {
-					for(int j=0; j<num; j++) {
+				for(int i=0; i<num; i++) {
+					for(int j=(num-i); j>0; j--) {
 						System.out.print("*");
 					}
 					System.out.println();
