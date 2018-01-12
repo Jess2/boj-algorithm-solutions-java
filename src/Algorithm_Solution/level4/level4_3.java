@@ -10,7 +10,6 @@ public class level4_3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] arr = new int[10000];
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("수열의 개수와 정수를 입력하세요(1~10,000) : ");
@@ -20,6 +19,8 @@ public class level4_3 {
 		
 		String input2 = scanner.next();
 		int num2 = Integer.parseInt(input2); //정수
+		
+		int[] arr = new int[num1];
 				
 		System.out.print("수열을 이루는 정수 " + num1 + "개를 입력하세요(1~10,000) : ");
 		
