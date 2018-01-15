@@ -11,7 +11,6 @@ public class level4_2 {
 		// TODO Auto-generated method stub
 		
 		int[] arr = new int[3];
-		int[] temp = new int[3];
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("세 정수를 공백으로 구분하여 입력하세요(1~100) : ");
