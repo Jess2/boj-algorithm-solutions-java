@@ -19,7 +19,7 @@ public class level6_1 {
 		
 		for(int i=0; i<input.length(); i++) {
 			//공백 전까지의 단어 add
-			if(input.charAt(i)==' ') {
+			if(input.charAt(i)==' ' && input.charAt(i-1) != ' ') {
 				oPerlishArray.add(input.substring(start, i));
 				start = i+1; //다음 단어의 시작위치 수정
 			}
