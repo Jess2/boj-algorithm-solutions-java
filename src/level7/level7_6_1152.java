@@ -1,10 +1,11 @@
-//백준저지 알고리즘 1152
+//BOJ level7_6_1152
+//영어 대소문자와 띄어쓰기만으로 이루어진 문장이 주어진다. 이 문장에는 몇 개의 단어가 있을까? 이를 구하는 프로그램을 작성하시오.
 
-package level6;
+package level7;
 
 import java.util.*;
 
-public class level6_1 {
+public class level7_6_1152 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,7 +37,6 @@ public class level6_1 {
 		for (int i = 0; i < oPerlishArray.size(); i++) {
 			System.out.format("[%d] = %s%n", i, oPerlishArray.get(i));
 		}
-
 	}
 
 }
