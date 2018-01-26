@@ -7,7 +7,7 @@
 
 package level7;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class level7_7_2908 {
 
@@ -35,6 +35,6 @@ public class level7_7_2908 {
 	
 	public static String reverseString(String s) {
 	    return ( new StringBuffer(s) ).reverse().toString();
-	 }
-
+	}
+	
 }
