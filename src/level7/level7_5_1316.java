@@ -7,7 +7,7 @@
 
 package level7;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level7_5_1316 {
 
@@ -16,7 +16,6 @@ public class level7_5_1316 {
 
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("입력할 단어의 개수와 단어를 입력하세요 : ");
 		int num = sc.nextInt();
 		
 		char[][] charArr = new char[num][];
@@ -38,11 +37,10 @@ public class level7_5_1316 {
 				}
 				str += String.valueOf(charArr[i][j]);
 			}
-
-			
 		}
 		
 		System.out.println(num);
+		sc.close();
 
 	}
 

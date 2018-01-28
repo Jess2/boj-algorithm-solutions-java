@@ -17,9 +17,17 @@ public class level7_2_10809 {
 		
 		//System.out.println(str.indexOf('a'));
 		
-		for(int i=97; i<123; i++) {
-			System.out.print(str.indexOf(Character.toString((char)i))+" ");
+//		for(int i='a'; i<'z'+1; i++) {
+//			System.out.print(str.indexOf(Character.toString((char)i))+" ");
+//		}
+		
+		for(char i='a'; i<'z'+1; i++) {
+			System.out.print(str.indexOf(Character.toString(i))+" ");
 		}
+		
+//		indexOf(문자)
+//		- 해당 문자가 들어있는 위치를 알려 줍니다.(문자가 없으면 -1 반환)
+//		예) "abcde".indexOf("e")에는 4가 읽어 집니다. 0부터 시작하기 때문입니다.(lastIndexOf는 뒤에서부터 셈)
 
 	}
 

@@ -28,11 +28,11 @@ public class level6_3_8958 {
 				if(charArr[j]=='O') { //O일 경우 
 					resultArr[i] += (count + 1);
 					count ++;
-				} else if(charArr[j]=='X') { //X일 경우 count 초기
+				} else if(charArr[j]=='X') { //X일 경우 count 초기화 
 					count = 0;
 				}
 			}
-			count = 0; //테스트케이스가 한 번 끝날 경우 count 초기
+			count = 0; //테스트케이스가 한 번 끝날 경우 count 초기화 
 		}
 		
 		for(int i=0; i<caseNum; i++) {
