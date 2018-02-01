@@ -33,18 +33,6 @@ public class level8_2_2292 {
 		}
 		
 		System.out.println(result);
-	
-		
-//		for (int i=1; i<=10000; i++) {
-//			list.add(d(i)); //셀프넘버가 아닌 숫자들을 동적배열 list에 할당 
-//		}
-//		
-//		for (int i=1; i<=10000; i++) {
-//			if (!list.contains(i)) { //동적배열 list에 없는 숫자, 즉 셀프넘버일 경우 출력 
-//				System.out.println(i);
-//			}
-//		}
-		
 
 	}
 
