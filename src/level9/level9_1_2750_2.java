@@ -31,14 +31,14 @@ public class level9_1_2750_2 {
 	//삽입 정렬 
 	public static int[] insertionSort(int[] arr) {
 		for(int i=1; i<arr.length; i++) {
-			int standard = arr[i];
+			int temp = arr[i];
 			int aux = i-1;
 			
-			while(aux>=0 && arr[aux] > standard) {
+			while(aux>=0 && arr[aux] > temp) {
 				arr[aux+1] = arr[aux];
 				aux--;
 			}
-			arr[aux+1] = standard;
+			arr[aux+1] = temp;
 		}
 		
 		return arr;
