@@ -21,11 +21,17 @@ public class level7_9_2941 {
 		String[] strArr = new String[] {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
 		
 		for(int j=0; j<strArr.length; j++) {
-			for(int i=0; i<str.length()-2; i++) {
-				String newStr = str.substring(i,i+3);
-				if(newStr.contains(strArr[j])) {
-					str = str.replaceFirst(strArr[j], "__");
-					length = length - strArr[j].length() + 1;
+			if(str.length() > 2) {
+				for(int i=0; i<str.length()-2; i++) {
+					String newStr = str.substring(i,i+3);
+					if(newStr.contains(strArr[j])) {
+						str = str.replaceFirst(strArr[j], "__");
+						length = length - strArr[j].length() + 1;
+					}
+				}
+			} else if(str.length() == 2){
+				if(strArr[j].equals(str)) {
+					length--;
 				}
 			}
 		}

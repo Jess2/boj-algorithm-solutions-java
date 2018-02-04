@@ -16,17 +16,19 @@ public class level8_2_2292 {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		int result = 0;
+		int num = sc.nextInt(); //입력받은 값 
+		int result = 0; //결과 값 
 		
 		List<Integer> list = new ArrayList<>();  //동적 배열 생성
-		list.add(2);
+		list.add(2); //0번째 인덱스에 2 추가 
 		
-		for(int i=1; i<=18300; i++) {
+		int x = num/6 + 1;
+		
+		for(int i=1; i<x; i++) {
 			list.add(list.get(i-1) + (6*i));
 		}
 		
-		for(int i=0; i<18300; i++) {
+		for(int i=0; i<list.size(); i++) {
 			if(num >= list.get(i) && num < list.get(i+1)) {
 				result = i+2;
 			}
