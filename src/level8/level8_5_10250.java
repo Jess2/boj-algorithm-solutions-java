@@ -10,13 +10,11 @@ public class level8_5_10250 {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
-		int testCase = sc.nextInt();
+		int testCase = sc.nextInt(); //테스트케이스 개수 입력받음
 		
-		int[] H = new int[testCase];
-		int[] W = new int[testCase];
-		int[] N = new int[testCase];
-		
-
+		int[] H = new int[testCase]; //호텔의 층 수
+		int[] W = new int[testCase]; //각 층의 방 수
+		int[] N = new int[testCase]; //몇 번째 손님인지
 		
 		String[] result = new String[testCase];
 		
@@ -27,21 +25,19 @@ public class level8_5_10250 {
 		}
 		
 		for(int i=0; i<testCase; i++) {
-			int x = 0;
-			int y = 0;
+			int x = 0; //층수
+			int y = 0; //호수
 			if(H[i] == 1) {
-				x = N[i];
-				y = 1;
+				x = 1;
+				y = N[i];
 			} else if(N[i] % H[i] == 0) {
 				x = H[i];
 				y = (N[i] / H[i]);
 			}else {
 				x = N[i] % H[i];
-//				if(N[i] / H[i] >= 9) {
-//					x = x*10;
-//				}
 				y = (N[i] / H[i]) + 1;
 			}
+			
 			if(y<10) {
 				result[i] = x + "0" + y;
 			} else {
