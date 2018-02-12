@@ -3,7 +3,8 @@
 
 package level4;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class level4_2 {
 
