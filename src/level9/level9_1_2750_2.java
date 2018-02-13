@@ -1,6 +1,5 @@
-//https://www.acmicpc.net/problem/2750
 //BOJ level9_1_2750
-//삽입 정렬, 거품 정렬 등의 간단한 정렬 알고리즘을 구현해 봅니다
+//성공
 
 package level9;
 
