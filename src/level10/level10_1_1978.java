@@ -1,5 +1,4 @@
 //BOJ level10_1_1978
-//주어진 수 N개 중에서 소수가 몇 개인지 찾아서 출력하는 프로그램을 작성하시오.
 //성공
 
 package level10;
@@ -22,7 +21,7 @@ public class level10_1_1978 {
 		int result = num; //결과를 출력하기 위한 변수 result에 기존 수의 개수를 저장
 		
 		for(int i=0; i<num; i++) {
-			if(arr[i] == 1) { //입력받은 수가 1일 경우, 1은 소수가 아니므로 result--
+			if(arr[i] == 1) { //입력받은 수가 1일 경우, 1은 소수가 아니므로 result 1 감소시킴
 				result--;
 			}
 			for(int j=2; j<arr[i]; j++) { //입력받은 수가 2일 경우, 2는 소수이므로 안의 조건문을 확인할 필요가 없다.
