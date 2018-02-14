@@ -2,7 +2,7 @@
 
 package level1;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level1_8_11719 {
 	

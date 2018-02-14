@@ -1,6 +1,5 @@
 //BOJ level9_6_1181
 //성공
-//check please, 다른 풀이법 궁금 
 
 package level9;
 

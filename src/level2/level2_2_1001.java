@@ -2,22 +2,15 @@
 
 package level2;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level2_2_1001 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("두 수 입력 : ");
-		
-		int input1 = sc.nextInt();
-		int input2 = sc.nextInt();
-		
-		System.out.println(input1-input2);
-
+		Scanner scanner = new Scanner(System.in);
+		int num1 = scanner.nextInt();
+		int num2 = scanner.nextInt();
+		System.out.println(num1-num2);
 	}
 
 }

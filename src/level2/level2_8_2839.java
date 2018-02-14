@@ -3,7 +3,7 @@
 
 package level2;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level2_8_2839 {
 
@@ -12,7 +12,6 @@ public class level2_8_2839 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("몇 키로를 배달해야 합니까? ");
 		int num = sc.nextInt();
 		int result = 0;
 		

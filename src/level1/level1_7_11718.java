@@ -2,7 +2,8 @@
 
 package level1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class level1_7_11718 {
 
@@ -11,8 +12,6 @@ public class level1_7_11718 {
 		
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<String> inputs = new ArrayList<>(); //동적배열 생성 
-		
-		System.out.println("문장 입력 : ");
 		
 		while(scanner.hasNextLine()) { //다음 줄이 있을 경우
 			String input = scanner.nextLine(); //입력받은 값을 String형 변수 input에 대입 

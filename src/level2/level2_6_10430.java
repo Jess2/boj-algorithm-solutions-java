@@ -2,7 +2,7 @@
 
 package level2;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level2_6_10430 {
 
@@ -10,8 +10,6 @@ public class level2_6_10430 {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("세 개의 수를 입력하세요 : ");
 		
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();

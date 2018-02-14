@@ -2,7 +2,7 @@
 
 package level2;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level2_7_2558 {
 
@@ -11,7 +11,6 @@ public class level2_7_2558 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("두 수를 입력 : ");
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 		
