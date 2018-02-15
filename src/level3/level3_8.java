@@ -15,13 +15,8 @@ public class level3_8 {
 		Scanner scanner = new Scanner(System.in);
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 		
-		System.out.print("월과 일 입력 : ");
-		
-		String input1 = scanner.next();
-		int month = Integer.parseInt(input1); //월 입력받음
-		
-		String input2 = scanner.next();
-		int day = Integer.parseInt(input2); //일 입력받음
+		int month = scanner.nextInt(); //월 입력받음
+		int day = scanner.nextInt(); //일 입력받음
 		
 		Date date = formatter.parse("2007"+month+day);  // 날짜 입력하는곳 .
 		date = new Date(date.getTime() + (1000*60*60*24*+0));  // 날짜에 하루를 더한 값 
@@ -34,7 +29,7 @@ public class level3_8 {
 		
 		String convertedString = "";
 		
-		switch (dayNum ) {
+		switch (dayNum) {
 		    case 1: convertedString = "SUN"; break;
 		    case 2: convertedString = "MON"; break;
 		    case 3: convertedString = "TUE"; break;
@@ -45,8 +40,6 @@ public class level3_8 {
 		}
 
 		System.out.println(convertedString);
-		
-		
 
 	}
 

@@ -3,7 +3,7 @@
 
 package level3;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level3_7 {
 
@@ -12,28 +12,17 @@ public class level3_7 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		while(true) {
-			System.out.println("100이하의 자연수 입력 : ");
-			String input = scanner.nextLine();
-			int num = Integer.parseInt(input);
-			
-			if(num>0 && num<=100) {
-				for(int i=0; i<num; i++) {
-					for(int j=0; j<i; j++) {
-						System.out.print(" ");
-					}
-					for(int k=(num-i); k>0; k--) {
-						System.out.print("*");
-					}
-					System.out.println();
-				}	
-				break;
-			} else {
-				System.out.println("100이하의 자연수를 입력하지 않았습니다.");
-				continue;
+		int num = scanner.nextInt();
+		
+		for(int i=0; i<num; i++) {
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");
 			}
-			
-		}
+			for(int k=(num-i); k>0; k--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}	
 		
 
 	}
