@@ -1,11 +1,12 @@
 //오늘은 2007년 1월 1일 월요일이다. 그렇다면 2007년 x월 y일은 무슨 요일일까? 이를 알아내는 프로그램을 작성하시오.
-//미완성
-		
+
 package level3;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
 
 public class level3_8 {
 
@@ -18,12 +19,26 @@ public class level3_8 {
 		int month = scanner.nextInt(); //월 입력받음
 		int day = scanner.nextInt(); //일 입력받음
 		
-		Date date = formatter.parse("2007"+month+day);  // 날짜 입력하는곳 .
-		date = new Date(date.getTime() + (1000*60*60*24*+0));  // 날짜에 하루를 더한 값 
-		// 하루를 뺄려면 (1000*60*60*24*-1) 해주시면 됩니다.
+		String m = "";
+		String d = "";
+		
+		if(month<10) {
+			m = "0" + month;
+		} else {
+			m += month;
+		}
+		
+		if(day<10) {
+			d = "0" + day;
+		} else {
+			d += day;
+		}
+		
+		Date date = formatter.parse("2007"+m+d);  // 날짜 입력하는곳 .
+		date = new Date(date.getTime() + (1000*60*60*24*+0));
 		
 		Calendar cal = Calendar.getInstance() ;
-		cal.setTime(date);              // 하루더한 날자 값을 Calendar  넣는다.
+		cal.setTime(date);              // Calendar에 넣는다.
 		
 		int dayNum = cal.get(Calendar.DAY_OF_WEEK);   // 요일을 구해온다. 
 		
