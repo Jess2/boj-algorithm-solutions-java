@@ -4,23 +4,20 @@
 
 package level3;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level3_11 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//String[] arr = new String[10];
 		Scanner scanner = new Scanner(System.in);
-		
-		System.out.print("길이가 100을 넘지 않는 영어단어입력 : ");
-		String input = scanner.nextLine();
+		String input = scanner.next();
 		
 		char[] arr = input.toCharArray(); //string을 char배열로 변환
 		
 		for(int i=0; i<arr.length; i++) {
-			if(i%10==0) {
+			if(i!=0 && i%10==0) {
 				System.out.println();
 			}
 			System.out.print(arr[i]);

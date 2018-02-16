@@ -2,7 +2,7 @@
 
 package level4;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level4_6 {
 
@@ -13,9 +13,7 @@ public class level4_6 {
 		int sum = 0;
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("0~99의 정수 입력 : ");
-		String input = scanner.nextLine();
-		int num = Integer.parseInt(input);
+		int num = scanner.nextInt();
 		final int origin = num;
 		
 		do {
@@ -24,7 +22,7 @@ public class level4_6 {
 			cycle++;
 		} while(num!=origin);
 		
-		System.out.println("사이클 수 : " + cycle);
+		System.out.println(cycle);
 
 	}
 

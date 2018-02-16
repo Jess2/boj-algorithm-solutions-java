@@ -3,7 +3,7 @@
 
 package level4;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level4_3 {
 
@@ -12,29 +12,20 @@ public class level4_3 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("수열의 개수와 정수를 입력하세요(1~10,000) : ");
+		int num = scanner.nextInt(); //수열을 이루는 정수의 개수
+		int standard = scanner.nextInt(); //기준 정수
 		
-		String input1 = scanner.next();
-		int num1 = Integer.parseInt(input1); //수열의 개수
+		int[] arr = new int[num];
 		
-		String input2 = scanner.next();
-		int num2 = Integer.parseInt(input2); //정수
-		
-		int[] arr = new int[num1];
-				
-		System.out.print("수열을 이루는 정수 " + num1 + "개를 입력하세요(1~10,000) : ");
-		
-		for(int i=0; i<num1; i++) {
-			String input3 = scanner.next();
-			arr[i] = Integer.parseInt(input3);
+		for(int i=0; i<num; i++) {
+			arr[i] = scanner.nextInt();
 		}
 		
-		for(int i=0; i<num1; i++) {
-			if(arr[i] < num2) {
+		for(int i=0; i<num; i++) {
+			if(arr[i] < standard) {
 				System.out.print(arr[i]+" ");
 			}
 		}
-		
 
 	}
 

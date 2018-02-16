@@ -3,7 +3,7 @@
 
 package level4;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level4_1 {
 
@@ -12,9 +12,7 @@ public class level4_1 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("시험점수 입력(0~100) : ");
-		String input = scanner.nextLine();
-		int score = Integer.parseInt(input);
+		int score = scanner.nextInt();
 
 		if(score>=90) {
 			System.out.println("A");

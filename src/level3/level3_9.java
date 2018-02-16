@@ -3,7 +3,7 @@
 
 package level3;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level3_9 {
 
@@ -13,15 +13,14 @@ public class level3_9 {
 		int sum = 0;
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("1이상 10,000이하의 자연수 입력 : ");
-		String input = scanner.nextLine();
-		int num = Integer.parseInt(input);
+		int num = scanner.nextInt();
 		
 		for(int i=1; i<=num; i++) {
 			sum += i;
 		}
 		
-		System.out.println("1부터 입력하신 숫자까지의 합 : " + sum);
+		System.out.println(sum);
+		
 	}
 
 }

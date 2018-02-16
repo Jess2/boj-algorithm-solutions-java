@@ -2,40 +2,37 @@
 
 package level4;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class level4_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
-		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("시험 본 과목의 개수 입력(1~1000) : ");
-		String input = scanner.nextLine();
-		int num = Integer.parseInt(input); //시험 본 과목의 개수
+		int num = scanner.nextInt(); //시험 본 과목의 개수
 		
 		int[] arr = new int[num]; //원래 성적 배열
-		int sum = 0;
+		float sum = 0;
 		
-		System.out.print("현재 성적 입력(1~100) : ");
+		scanner.nextLine();
+		
 		for(int i=0; i<num; i++) {
-			String input2 = scanner.next();
-			arr[i] = Integer.parseInt(input2);
+			arr[i] = scanner.nextInt();
 		}
 		
 		Arrays.sort(arr);
 		int max = arr[num-1]; //최대 점수
 		
-		for(int i=0; i<num; i++) {
-			sum += (arr[i]*100)/max; //새로운 점수 계산
+		for(int i=0; i<num; i++) { //새로운 점수 계산
+			sum += ((float)arr[i]/max)*100;
 		}
 		
-		double newAverage = sum/num;
+		sum /= num;
 		
-		System.out.printf("%.2f", newAverage);
+		System.out.printf("%.2f", sum);
 	}
 
 }

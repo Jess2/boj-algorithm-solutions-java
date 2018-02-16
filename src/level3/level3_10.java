@@ -11,16 +11,12 @@ public class level3_10 {
 		
 		int sum = 0;
 		Scanner scanner = new Scanner(System.in);
+
+		int num = scanner.nextInt(); //합할 숫자의 개수
+		String str = scanner.next(); //합할 숫자들
 		
-		System.out.print("몇 개의 숫자를 합하시겠습니까?(1이상 100이하의 자연수) : ");
-		String input = scanner.nextLine();
-		int count = Integer.parseInt(input);
-		
-		System.out.print("숫자들을 공백없이 입력하세요 : ");
-		String input2 = scanner.nextLine();
-		
-		for(int i=0; i<count; i++) {
-			sum += (input2.charAt(i) - '0');
+		for(int i=0; i<num; i++) {
+			sum += (str.charAt(i) - '0'); //string형을 char형으로 문자 하나하나씩 받고 그걸 숫자형으로 변환하여 sum에 더함.
 		}
 		
 		System.out.println(sum);

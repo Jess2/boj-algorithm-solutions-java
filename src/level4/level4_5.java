@@ -2,7 +2,7 @@
 
 package level4;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level4_5 {
 
@@ -11,15 +11,11 @@ public class level4_5 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("테스트케이스 개수 입력 : ");
-		String input = scanner.nextLine();
-		int num = Integer.parseInt(input); //테스트케이스 개수
+		int num = scanner.nextInt(); //테스트케이스 개수
 		double[] result = new double[num];
 		
 		for(int i=0; i<num; i++) {
-			System.out.print("학생의 수와 그 학생들의 점수를 공백으로 구분하여 입력 : ");
-			String input2 = scanner.next();
-			int num2 = Integer.parseInt(input2); //학생의 수
+			int num2 = scanner.nextInt();
 			
 			int[] arr = new int[num2]; //학생의 수만큼의 길이를 갖고있는 점수 배열 arr 생성
 			int sum = 0; //점수들의 합
@@ -44,7 +40,6 @@ public class level4_5 {
 			
 		}
 		
-		System.out.println("결과 :");
 		for(int i=0; i<num; i++) {
 			System.out.printf("%.3f",result[i]);
 			System.out.println("%");
