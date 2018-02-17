@@ -3,7 +3,8 @@
 
 package level5;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class level5_1_4673 {
 	
@@ -20,12 +21,6 @@ public class level5_1_4673 {
           number /= 10;
 		}
 		
-		//위의 while부분을 아래와 같이 짜도 무방함.
-//		String numStr = String.valueOf(number);
-//		
-//		for (int i=0; i<numStr.length(); i++) {
-//			result += Integer.parseInt(numStr.substring(i, i+1));
-//		}
 		return result; //result 반환 
 	}
 
@@ -44,44 +39,6 @@ public class level5_1_4673 {
 			}
 		}
 		
-		
-		
-//		int sum = 0;
-//		boolean[] arr = new boolean[100];
-//	    
-//	    for(int i=0; i<=arr.length; i++) {
-//	    		int num = i;
-//	    		
-//	    		//원래의 숫자를 더해서 sum에 저장 
-//    			sum += num;
-//	    		
-//	    		//각 자리의 숫자를 더해서 sum에 저장 
-//	    		while(num!=0){
-//                //num을 10으로 나눈 나머지를 sum에 더한다.
-//                sum += num%10;
-//                //num을 10으로 나눈 값을 다시 num에 저장한다.
-//                num /= 10;
-//            }
-//	    		
-//	    		while(num!=0) {
-//	    			sum += num%10;
-//	    			num = num/10;
-//	    		}
-//	    		
-//	    		if(sum <= 100) {
-//	    			arr[sum] = true;
-//	    		} else {
-//	    			break;
-//	    		}
-//	    }
-//	    
-//	    for(int i=0; i<=arr.length; i++) {
-//	    		if(arr[i]==false) {
-//	    			System.out.println(i);
-//	    		}
-//	    		System.out.println(i + " " + arr[i]);
-//	    }
-
 	}
 	
 }

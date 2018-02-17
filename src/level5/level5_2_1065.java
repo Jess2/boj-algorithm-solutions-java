@@ -1,9 +1,8 @@
 //백준저지 알고리즘 5_2_1065
-//check please
 
 package level5;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level5_2_1065 {
 
@@ -12,7 +11,6 @@ public class level5_2_1065 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("1000보다 작거나 같은 자연수 입력 : ");
 		int num = sc.nextInt();
 		int result = 0;
 		
