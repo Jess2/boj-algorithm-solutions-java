@@ -2,7 +2,7 @@
 
 package level6;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level6_3_8958 {
 
@@ -11,18 +11,15 @@ public class level6_3_8958 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("테스트 케이스 개수 입력 : ");
-		int caseNum = scanner.nextInt();
+		int caseNum = scanner.nextInt(); //테스트케이스 개수 입력받아 저장
 		int count = 0;
 		
-		int[] resultArr = new int[caseNum];
+		int[] resultArr = new int[caseNum]; //테스트케이스 길이만큼 결과값을 저장할 배열 생성
 		
-		for(int i=0; i<caseNum; i++) {
-			System.out.print((i+1)+"번째 테스트 케이스 입력 : ");
-			
-			Scanner scanner2 = new Scanner(System.in);
-			String input = scanner2.nextLine();
-			char[] charArr = input.toCharArray(); //string을 char배열로 변환
+		scanner.nextLine();
+		for(int i=0; i<caseNum; i++) { //테스트케이스 개수만큼 반복
+			String input = scanner.next();
+			char[] charArr = input.toCharArray(); //입력받은 string을 char배열로 변환
 			
 			for(int j=0; j<charArr.length; j++) { //charArr 길이만큼 반복 
 				if(charArr[j]=='O') { //O일 경우 
@@ -36,7 +33,7 @@ public class level6_3_8958 {
 		}
 		
 		for(int i=0; i<caseNum; i++) {
-			System.out.println(resultArr[i]);
+			System.out.println(resultArr[i]); //결과값을 저장한 배열의 값을 하나씩 출력
 		}
 
 	}

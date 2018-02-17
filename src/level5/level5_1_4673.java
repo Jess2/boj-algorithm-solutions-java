@@ -1,5 +1,4 @@
 //백준저지 알고리즘 5_1_4673
-//please check
 
 package level5;
 

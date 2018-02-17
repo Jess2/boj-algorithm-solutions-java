@@ -2,7 +2,7 @@
 
 package level6;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level6_5_10039 {
 
@@ -13,13 +13,8 @@ public class level6_5_10039 {
 		int[] arr = new int[5];
 		int sum = 0;
 
-		System.out.println("점수 입력 : ");
 		for(int i=0; i<5; i++) {
 			arr[i] = sc.nextInt();
-			if(arr[i] % 5 != 0) {
-				System.out.println("점수는 5의 배수여야 합니다. 프로그램 종료.");
-				return;
-			}
 			if(arr[i] < 40) {
 				arr[i] = 40;
 			}
@@ -29,7 +24,7 @@ public class level6_5_10039 {
 			sum += arr[i];
 		}
 		
-		System.out.println("평균: " + sum/5);
+		System.out.println(sum/5);
 		
 		
 	}
