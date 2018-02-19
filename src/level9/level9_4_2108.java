@@ -5,7 +5,10 @@
 
 package level9;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class level9_4_2108 {
@@ -22,10 +25,12 @@ public class level9_4_2108 {
 			arr[i] = sc.nextInt();
 		}
 		
-		System.out.println(avg(arr));
-		System.out.println(center(arr));
-		System.out.println(mode(arr));
-		System.out.println(range(arr));
+		Arrays.sort(arr);
+		
+		System.out.println(avg(arr)); //산술평균
+		System.out.println(center(arr)); //중앙값
+		System.out.println(mode(arr)); //최빈값
+		System.out.println(range(arr)); //범위
 
 	}
 	
@@ -35,43 +40,63 @@ public class level9_4_2108 {
 		for(int i=0; i<array.length; i++) {
 			sum += array[i];
 		}
-		return (sum/array.length);
+		return Math.round(sum/array.length);
 	}
 	
 	//중앙값 메소드
 	private static int center(int[] array) {
-		Arrays.sort(array);
-		if(array.length % 2 != 0) {
-			return (array[(array.length + 1) / 2] - 1);
-		} else {
-			return array[(array.length / 2 - 1) + ((array.length + 2) / 2 - 1) / 2];
-		}
+		return array[array.length / 2];
 	}
 	
 	//최빈값 메소드
 	private static int mode(int[] array) {
-        int mode = 0; 
-        int[] index = new int[500000];
-        int max = Integer.MIN_VALUE;
+		int[][] arr2 = new int[array.length][2];
+		int j = 1;
+		
+		for(int i=0; i<array.length; i++) {
+			if(i==0) {
+				arr2[i][0] = array[i];
+			}
+			if(i>0 && (array[i-1] != array[i])) {
+				arr2[j++][0] = array[i];
+			}
+		}
+		for(int i=0; i<array.length; i++) {
+			for(int k=0; k<array.length; k++) {
+				if(arr2[i][0] == array[k]) { //array[k]가 이미 있을 경우
+					arr2[i][1] += 1;
+				}
+			}
+		}
+		
+		int max = 1;
+		for(int i=0; i<arr2.length; i++) {
+			if(arr2[i][1] >= max) {
+				max = arr2[i][1];
+			}
+		}
+		
+		List<Integer> list = new ArrayList<>();  //동적 배열 생성
+		
+		for(int i=0; i<arr2.length; i++) {
+			if(arr2[i][1] == max) {
+				list.add(arr2[i][0]);
+			}
+		}
+		
+		Collections.sort(list);
+		
+		if(list.size() > 1) {
+			return list.get(1);
+		} else {
+			return list.get(0);
+		}
+		
         
-        for (int i = 0; i < array.length; i++) {
-            index[array[i]]++;
-        }
-        
-        for (int i = 0; i < index.length; i++)
-        {
-            if (index[i] > max)
-            {
-                max = index[i]; 
-                mode = i;
-            }
-        }
-        return mode;
 	}
 	
 	//범위 메소드 
 	private static int range(int[] array) {
-		Arrays.sort(array);
 		return array[array.length - 1] - array[0];
 	}
 

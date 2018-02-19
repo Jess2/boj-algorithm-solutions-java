@@ -1,5 +1,4 @@
 //BOJ level9_5_1427
-//성공
 
 package level9;
 
