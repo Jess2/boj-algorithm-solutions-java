@@ -1,5 +1,4 @@
 //BOJ level10_1_1978
-//성공
 
 package level10;
 
