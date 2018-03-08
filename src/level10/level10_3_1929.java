@@ -29,6 +29,8 @@ public class level10_3_1929 {
 			}
 		}
 		
+		sc.close();
+		
 	}
 
 }
