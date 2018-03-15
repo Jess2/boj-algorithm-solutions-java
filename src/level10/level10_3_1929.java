@@ -1,4 +1,4 @@
-//BOJ level10_3_1929
+//https://www.acmicpc.net/problem/1929
 
 package level10;
 
