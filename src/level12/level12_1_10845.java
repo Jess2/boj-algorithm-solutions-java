@@ -28,8 +28,7 @@ public class level12_1_10845 {
 					if(front == rear) { //큐가 비어있을 경우 -1을 출력
 						System.out.println(-1);
 					} else { //큐에 무언가가 들어있을 경우, 큐에서 가장 앞에 있는 정수를 빼고 그 수를 출력
-						System.out.println(itemArray[front+1]);
-						front++;
+						System.out.println(itemArray[(front++)+1]);
 					}
 					break;
 					
