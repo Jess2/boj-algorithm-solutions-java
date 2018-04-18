@@ -12,49 +12,26 @@ public class level8_3_1193 {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt(); //사용자로부터 값을 입력받아서 input에 저장 
+		int num = sc.nextInt(); //몇 번째 값을 찾고 싶은지 입력받음
+		int temp = 0;
+		int i = 1; //몇 번째 라인인지 저장
+		int j; //몇 번째 값인지 저장
 		
-		int row = find(input); //몇 번째 줄인지 찾아서 row에 저장
-		System.out.println(row);
-		
-		int line;
-		int top = row;
-		int bottom = 0;
-		
-		if(row % 2 == 0) { //짝수 번째 줄일 경우
-			if(input % row == 0) {
-				top = 1;
-				bottom = row;
-			} else {
-				line = input % row; //몇 번째 라인인지 찾아서 line에 저장 
-				System.out.println(line);
-				top = row - (line - 1); //분자 
-				bottom = line; //분모 
+		while(true) {
+			temp += i;
+			if(num < temp) {
+				temp -= i;
+				break;
 			}
-		} 
-		else if(row % 2 != 0) { //홀수 번째 줄일 경우
-			if(input % row == 0) {
-				top = 1;
-				bottom = row;
-			} else {
-				line = input % row; //몇 번째 라인인지 찾아서 line에 저장
-				top -= (line - 1); //분자
-				bottom = line; //분모 
-			}
+			i++;
 		}
 		
-		System.out.println(top+"/"+bottom);
-
-	}
-	
-	//몇 번째 줄인지 찾는 메소드 
-	private static int find(int input) {
-		int n = 1;
-		while(true) {
-			if(input > ((n-1)*n)/2 && input <= (n*(n+1))/2) {
-				return n;
-			}
-			n++;
+		j = num - temp; 
+		
+		if(i%2 != 0) { //홀수
+			System.out.println((i-j+1)+"/"+j);
+		} else { //짝수
+			System.out.println(j+"/"+(i-j+1));
 		}
 	}
 

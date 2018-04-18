@@ -12,13 +12,11 @@ public class level7_1_11654 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("알파벳 소문자, 대문자 숫자 0-9 중 하나 입력 : ");
-		
-		String str = sc.nextLine();
-		char[] charArr = str.toCharArray();
+		String str = sc.nextLine(); //스트링 입력받음
+		char[] charArr = str.toCharArray(); //char형 배열로 변환
 		
 		for(int i=0; i<charArr.length; i++) {
-			System.out.println((int)(charArr[i]));
+			System.out.println((int)(charArr[i])); //char를 int로 변환
 		}
 
 	}

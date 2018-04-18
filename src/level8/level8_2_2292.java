@@ -1,8 +1,5 @@
 //https://www.acmicpc.net/problem/2292
-//BOJ level8_2_2292
-//위의 그림과 같이 육각형으로 이루어진 벌집이 있다. 그림에서 보는 바와 같이 중앙의 방 1부터 시작해서 이웃하는 방에 돌아가면서 1씩 증가하는 번호를 주소로 매길 수 있다.
-//숫자 N이 주어졌을 때, 벌집의 중앙 1에서 N번 방까지 최소 개수의 방을 지나서 갈 때 몇 개의 방을 지나가는지(시작과 끝을 포함하여)를 계산하는 프로그램을 작성하시오.
-//예를 들면, 13까지는 3개, 58까지는 5개를 지난다.
+//시간초과
 
 package level8;
 
@@ -24,18 +21,22 @@ public class level8_2_2292 {
 		
 		int x = num/6 + 1;
 		
-		for(int i=1; i<x; i++) {
-			list.add(list.get(i-1) + (6*i));
+		for(int i=1; i<=x; i++) {
+			list.add(list.get(i-1) + (6*i)); //동적 배열에 2,8,20,38 등 한 사이클에서 가장 작은 수를 동적 배열에 추가
 		}
 		
-		for(int i=0; i<list.size(); i++) {
-			if(num >= list.get(i) && num < list.get(i+1)) {
-				result = i+2;
+		for(int i=0; i<list.size()-1; i++) {
+			if(num >= list.get(i) && num < list.get(i+1)) { //입력받은 num의 값이 몇 번째 사이클에 속해 있는지 구함
+				if(i == 0) {
+					result = 1;
+				} else {
+					result = i+2;	
+				}
 			}
 		}
 		
 		System.out.println(result);
-
+		
 	}
 
 }

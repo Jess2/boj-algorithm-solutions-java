@@ -7,7 +7,7 @@
 
 package level7;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level7_7_2908 {
 
@@ -16,25 +16,24 @@ public class level7_7_2908 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("0이 포함되어 있지 않은 세 자리 수 두 개 입력 : ");
-		
 		String str1 = sc.next();
 		String str2 = sc.next();
 		
-		int num1 = Integer.parseInt(reverseString(str1));
-		int num2 = Integer.parseInt(reverseString(str2));
+		int num1 = Integer.parseInt(reverseString(str1)); //str1 문자열 뒤집어서 int형으로 변환
+		int num2 = Integer.parseInt(reverseString(str2)); //str2 문자열 뒤집어서 int형으로 변환
 		
 		if(num1 > num2) {
 			System.out.println(num1);
-		} else if(num1 < num2) {
-			System.out.println(num2);
 		} else {
-			System.out.println("비교할 수 없습니다.");
+			System.out.println(num2);
 		}
 	}
 	
 	public static String reverseString(String s) {
-	    return ( new StringBuffer(s) ).reverse().toString();
+		StringBuffer sb = new StringBuffer(s);
+		sb = sb.reverse();
+		
+	    return sb.toString();
 	}
 	
 }

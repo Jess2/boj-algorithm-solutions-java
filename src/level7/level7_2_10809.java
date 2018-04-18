@@ -3,7 +3,7 @@
 
 package level7;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class level7_2_10809 {
 
@@ -12,7 +12,6 @@ public class level7_2_10809 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("알파벳 소문자로 이루어진 단어 입력 : ");
 		String str = sc.next();
 		
 		//System.out.println(str.indexOf('a'));
