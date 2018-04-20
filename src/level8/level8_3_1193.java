@@ -19,7 +19,7 @@ public class level8_3_1193 {
 		
 		while(true) {
 			temp += i;
-			if(num < temp) {
+			if(num <= temp) {
 				temp -= i;
 				break;
 			}

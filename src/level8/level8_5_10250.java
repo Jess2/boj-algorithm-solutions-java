@@ -27,13 +27,13 @@ public class level8_5_10250 {
 		for(int i=0; i<testCase; i++) {
 			int x = 0; //층수
 			int y = 0; //호수
-			if(H[i] == 1) {
+			if(H[i] == 1) { //건물의 높이가 1인 경우, 층수(x)는 항상 1이다.
 				x = 1;
 				y = N[i];
-			} else if(N[i] % H[i] == 0) {
+			} else if(N[i] % H[i] == 0) { //맨 꼭대기 층일 경우
 				x = H[i];
 				y = (N[i] / H[i]);
-			}else {
+			}else { //일반적인 경우
 				x = N[i] % H[i];
 				y = (N[i] / H[i]) + 1;
 			}
