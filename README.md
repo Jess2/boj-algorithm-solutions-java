@@ -1,4 +1,4 @@
-# Algorithm_Solution
+# boj-algorithm
 > Baekjoon Online Judge Algorithm Solution
 
 ## BOJ Personal Profile
