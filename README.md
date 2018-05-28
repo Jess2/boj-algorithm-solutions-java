@@ -1,8 +1,9 @@
 # boj-algorithm
 > Baekjoon Online Judge Algorithm Solution
+> [백준저지](https://www.acmicpc.net) 사이트의 알고리즘 문제 풀이를 Commit합니다.
 
 ## BOJ Personal Profile
-> [BOJ Profile Link](https://www.acmicpc.net/user/jess2)
+> [개인 프로필](https://www.acmicpc.net/user/jess2)
 
 ## 단계별 문제풀이
 - [1단계](https://github.com/JESS2/Algorithm_Solution/tree/master/src/level1)
@@ -26,3 +27,6 @@
 - [20단계](https://github.com/JESS2/Algorithm_Solution/tree/master/src/level20)
 - [22단계](https://github.com/JESS2/Algorithm_Solution/tree/master/src/level22)
 - [27단계](https://github.com/JESS2/Algorithm_Solution/tree/master/src/level27)
+
+## 난이도별 문제풀이
+- [step 0](https://github.com/JESS2/Algorithm_Solution/tree/master/src/step0)
