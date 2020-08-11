@@ -31,3 +31,7 @@
 
 ## 난이도별 문제풀이
 - [step-0](https://github.com/JESS2/Algorithm_Solution/tree/master/src/step0)
+
+## etc.
+- [기타 Java 알고리즘 문제풀이 저장소](https://github.com/JESS2/algorithm-solutions-java)
+- [JavaScript 알고리즘 문제풀이 저장소](https://github.com/JESS2/algorithm-solutions-javascript)
